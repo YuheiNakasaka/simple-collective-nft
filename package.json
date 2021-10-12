@@ -1,0 +1,29 @@
+{
+  "name": "simple-collective-nft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:node": "DEV_ENV=localhost npx hardhat node",
+    "dev:deploy": "DEV_ENV=localhost node scripts/deploy.js --network localhost",
+    "dev:faucet": "DEV_ENV=localhost node scripts/faucet.js",
+    "dev:mint": "DEV_ENV=localhost node scripts/mint.js",
+    "dev:view": "DEV_ENV=localhost node scripts/view.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.5"
+  },
+  "dependencies": {
+    "@alch/alchemy-web3": "^1.1.4",
+    "@openzeppelin/contracts": "^4.3.2",
+    "dotenv": "^10.0.0"
+  }
+}

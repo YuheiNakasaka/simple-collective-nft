@@ -30,5 +30,11 @@ module.exports = {
       gas: 2100000,
       gasPrice: 8000000000,
     },
+    polygon: {
+      url: env.apiUrl,
+      accounts: [env.priKey],
+      gas: 2100000,
+      gasPrice: 8000000000,
+    },
   },
 };

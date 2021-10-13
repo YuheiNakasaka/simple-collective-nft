@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev:node": "DEV_ENV=localhost npx hardhat node",
-    "dev:deploy": "DEV_ENV=localhost node scripts/deploy.js --network localhost",
+    "dev:deploy": " DEV_ENV=localhost npx hardhat run scripts/deploy.js --network localhost",
     "dev:faucet": "DEV_ENV=localhost node scripts/faucet.js",
     "dev:mint": "DEV_ENV=localhost node scripts/mint.js",
-    "dev:view": "DEV_ENV=localhost node scripts/view.js"
+    "dev:view": "DEV_ENV=localhost node scripts/view.js",
+    "staging:deploy": "DEV_ENV=staging npx hardhat run scripts/deploy.js --network mumbai",
+    "staging:mint": "DEV_ENV=staging node scripts/mint.js",
+    "staging:view": "DEV_ENV=staging node scripts/view.js"
   },
   "keywords": [],
   "author": "",

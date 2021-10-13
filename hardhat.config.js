@@ -2,10 +2,11 @@ require("@nomiclabs/hardhat-waffle");
 const env = require("./config/config");
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
-
-  for (const account of accounts) {
-    console.log(account.address);
+  if (process.env.DEV_ENV === "localhost") {
+    const accounts = await hre.ethers.getSigners();
+    for (const account of accounts) {
+      console.log(account.address);
+    }
   }
 });
 
@@ -23,5 +24,11 @@ module.exports = {
     //   url: env.apiUrl,
     //   accounts: [`0x${env.priKey}`],
     // },
+    mumbai: {
+      url: env.apiUrl,
+      accounts: [env.priKey],
+      gas: 2100000,
+      gasPrice: 8000000000,
+    },
   },
 };

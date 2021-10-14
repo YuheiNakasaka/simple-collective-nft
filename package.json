@@ -14,7 +14,8 @@
     "staging:view": "DEV_ENV=staging node scripts/view.js",
     "prod:deploy": "DEV_ENV=prod npx hardhat run scripts/deploy.js --network polygon",
     "prod:mint": "DEV_ENV=prod node scripts/mint.js",
-    "prod:view": "DEV_ENV=prod node scripts/view.js"
+    "prod:view": "DEV_ENV=prod node scripts/view.js",
+    "test": "DEV_ENV=localhost npx hardhat test"
   },
   "keywords": [],
   "author": "",
